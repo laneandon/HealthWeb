@@ -1,0 +1,29 @@
+<template name="register">
+    <div class="container">
+        <form class="form-register" style="text-align: center;">
+            <div>
+                {{#if errorMessages}}
+                    <div class="list-errors">
+                        {{#each errorMessages}}
+                            <div class="list-item">{{this}}</div>
+                        {{/each}}
+                    </div>
+                {{/if}}
+            </div>
+            <h2 class="form-signin-heading"> 用户注册 </h2>
+            <label for="UserEmail" class="sr-only">
+                用户名
+            </label>
+            <input type="text" name="txtUserName" id="txtUserName" class="form-control" placeholder="用户名" required autofocus/>
+            <br/>
+            <label for="UserPassword" class="sr-only">
+                用户名
+            </label>
+            <input type="password" name="txtPassword" id="txtPassword" class="form-control" placeholder="密码" required/>
+            <br/>
+
+            <button type="submit" class="btn btn-success">注册</button>
+            <input type="button" id="loginpage" class="btn btn-danger block" value="登录"/>
+        </form>
+    </div>
+</template>

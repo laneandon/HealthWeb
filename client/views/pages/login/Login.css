@@ -1,0 +1,10 @@
+.list-errors .list-item {
+    letter-spacing: .3em;
+    text-indent: .3em;
+    text-transform: uppercase;
+    background: #f6fccf;
+    color: #ff4400;
+    font-size: .625em;
+    margin-bottom: 1px;
+    padding: .7rem 0;
+}

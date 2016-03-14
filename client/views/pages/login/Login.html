@@ -1,0 +1,70 @@
+<template name="loginTemp">
+    <form id="login_form" method="post">
+    <div class="text">
+        Login in for iHealth Cloud
+    </div>
+    <div class="formBlo">
+        <div id="loginnote">
+            {{#if errorSummary}}
+                <div class="list-errors">
+                    {{#each errorSummary}}
+                        <div class="list-item">{{this}}</div>
+                    {{/each}}
+                </div>
+            {{/if}}
+        </div>
+        <div class="Bline">
+            <div class="icon Uname">
+            </div>
+            <input name="txtUserName" id="txtUserName" type="text" class="txt {{errorClass 'txtUserName'}}" placeholder="用户名" required="" TabIndex="1">
+        </div>
+        <div class="Bline">
+            <div class="icon Upassword">
+            </div>
+            <input name="txtPassword" id="txtPassword" type="password" class="txt {{errorClass 'txtPassword'}}" placeholder="密码" required="" TabIndex="1">
+        </div>
+        <div class="btn">
+            <input type="submit" name="BtnLogin" value="登录" id="BtnLogin" tabindex="3"/>
+        </div>
+        <div class="links">
+            <a class="f" href="/finduseraccount">
+                Forgot your password?</a>&nbsp;<a href="/regaccount">New account</a>
+        </div>
+        <br/>
+        <br/>
+    </div>
+    </form>
+    <script language="JavaScript">
+        /*jQuery.validator.addMethod("emailformat", function (value, element) {
+            return (/^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test(value));
+        }, "Please be certain to enter your email.");
+
+        $().ready(function () {
+            $("#login_form").validate({
+                errorClass: 'error',
+                rules: {
+                    txtUserName: {
+                        required: true,
+                        minlength: 5,
+                        maxlength: 128,
+                        emailformat: true
+                    },
+                    txtPassword: {
+                        required: true
+                    }
+                },
+                messages: {
+                    txtUserName: {
+                        required: 'Please enter a valid email address.',
+                        minlength: 'Must be at least 5 characters long.',
+                        maxlength: 'The email exceeds maximum length of 128 characters.',
+                        emailformat: 'Please enter a valid email address.'
+                    },
+                    txtPassword: {
+                        required: 'The password is required.'
+                    }
+                }
+            });
+        });*/
+    </script>
+</template>

@@ -1,0 +1,18 @@
+<template name="BpAdd">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                {{> loginButtons}}
+            </div>
+        </div>
+
+        {{>Nav}}
+
+        <br/>
+        <h1 style="text-align: center;">新增血压数据</h1>
+        <br/>
+        <div class="new-bpdata-container">
+            {{> quickForm collection="BloodPressureDatas" id="insertBpForm"  type="insert" class="new-form"}}
+        </div>
+    </div>
+</template>

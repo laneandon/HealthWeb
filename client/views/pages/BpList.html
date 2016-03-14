@@ -1,0 +1,30 @@
+<template name="BpList">
+
+    <table width="90%" border="0">
+        <tr>
+            <th valign="middle" align="center" scope="col">测量时间</th>
+            <th valign="middle" align="center" scope="col">高压</th>
+            <th valign="middle" align="center" scope="col">低压</th>
+            <th valign="middle" align="center" scope="col">操作</th>
+        </tr>
+
+        {{#if Template.subscriptionsReady}}
+            {{#each BpOwnerList}}
+                <tr>
+                    <td>{{MDate}}</td>
+                    <td>{{HP}}</td>
+                    <td>{{LP}}</td>
+                    <td>
+                        <a href="bpdetail/{{_id}}" target="_blank">查看</a>
+                        <a href="JavaScript:void(0);" SingleId="{{_id}}" class="delSingleRecorder">删除</a>
+                    </td>
+                </tr>
+            {{/each}}
+        {{else}}
+            <tr>
+                <td> 加载中...</td>
+            </tr>
+        {{/if}}
+    </table>
+
+</template>
